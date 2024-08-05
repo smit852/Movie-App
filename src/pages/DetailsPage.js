@@ -47,6 +47,9 @@ const DetailsPage = () => {
             src={imageURL+data?.poster_path}
             className='h-80 w-60 object-cover rounded'
           />
+          <button className='bg-white px-4 py-2 min-w-60 text-black font-bold rounded mt-4 hover:bg-gradient-to-l from-red-500 to-orange-500 shadow-md transition-all hover:scale-105'>
+              Play Now
+          </button>
         </div>
         <div>
           <h2 className='text-2xl lg:text-4xl lg:pt-2 font-bold text-white'>{data?.title || data?.name}</h2>
@@ -62,6 +65,7 @@ const DetailsPage = () => {
             <p>
               Views : {Number(data?.vote_count)}
             </p>
+            
             <span>|</span>
             <p>
               Duration : {duration[0]}h {duration[1]}m
